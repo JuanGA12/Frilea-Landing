@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Javascript -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="assets/js/home.js"></script>
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+    <script>
+      tailwind.config = {
+        important: true,
+        theme: {
+          screens: {
+            xs: "450px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            xxl: "1440px",
+          },
+          colors: {
+            transparent: "transparent",
+            current: "currentColor",
+
+            black: "#000",
+            white: "#fff",
+
+            gray: {
+              400: "#cbd5e0",
+              600: "#718096",
+              800: "#2d3748",
+            },
+            red: {
+              200: "#fed7d7",
+              300: "#feb2b2",
+              600: "#e53e3e",
+              700: "#c53030",
+            },
+            yellow: {
+              200: "#fefcbf",
+            },
+          },
+          fontFamily: {
+            display: ["Muli", "sans-serif"],
+            body: ["Muli", "sans-serif"],
+          },
+          fontSize: {
+            micro: "0rem",
+            xss: "0.5rem",
+            xs: "0.75rem",
+            sm: "0.875rem",
+            base: "1rem",
+            lg: "1.125rem",
+            xl: "1.28rem",
+            "2xl": "1.5rem",
+            "3xl": "1.7rem",
+            "4xl": "2.275rem",
+            "5xl": "3rem",
+            "5.5xl": "3.4rem",
+            "6xl": "4rem",
+            "7xl": "5rem",
+            "8xl": "6.75rem",
+          },
+          borderRadius: {
+            none: "0",
+            sm: "0.125rem",
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            full: "9999px",
+            xl: "1.25rem",
+            xl2: "0.5rem",
+            xl3: "0.5rem",
+          },
+          boxShadow: {
+            DEFAULT:
+              "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+            md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+            lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+            xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+            inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+            outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
+            purple: "0 0 0 2px #7561E5",
+            none: "none",
+          },
+          extend: {
+            colors: {
+              frilea: {
+                "dark-blue": "#0C1937",
+                purple: "#7561E5",
+                yellow: "#FFC800",
+                "dark-purple": "#3E36B2",
+                "light-purple": "#C6BBFF",
+                "thin-purple": "#c3bfe8",
+                "ultra-light-purple": "#e4e1f5",
+                "dark-yellow": "#E59405",
+                white: "#F8F8F8",
+                red: "#EB5757",
+                grey: "#D7D7D7",
+                "text-grey": "#828282",
+                "footer-grey": "#EFEFEF",
+                "medium-grey": "#B1B1B1",
+                "light-grey": "#E0E0E0",
+                "lighter-grey": "#F8F8F8",
+                "light-yellow": "#faf089",
+                "blue-grey": "#C9CBD1",
+                "blue-dark-grey": "#373f61",
+                "blue-sky": "#2D9CDB",
+                "green-500": "#71EC85",
+                "green-600": "#6FCF97",
+                "green-light": "#1FD77F",
+              },
+            },
+            margin: {
+              96: "24rem",
+              128: "32rem",
+            },
+            backgroundColor: (theme) => theme("colors"),
+            textColor: (theme) => theme("colors"),
+            maxHeight: {
+              400: "400px",
+              450: "450px",
+              500: "500px",
+              550: "550px",
+            },
+            maxWidth: {
+              "1/4": "25%",
+              "1/2": "50%",
+              "3/4": "75%",
+              24: "6rem",
+            },
+            minWidth: {
+              24: "6rem",
+            },
+            minHeight: {
+              350: "350px",
+            },
+            translate: {
+              14: "3.5rem",
+              36: "9rem",
+              44: "11rem",
+              98: "98%",
+              105: "105%",
+              110: "110%",
+              out: "1000%",
+              "-out": "-1000%",
+              "-44": "-11rem",
+              "-68": "-17rem",
+              "-80": "-20rem",
+              "-92": "-23rem",
+              "-104": "-26rem",
+              "-116": "-29rem",
+              "-128": "-32rem",
+              "-140": "-35rem",
+              "-152": "-38rem",
+              30: "7.5rem",
+              44: "11rem",
+              68: "17rem",
+              80: "20rem",
+              92: "23rem",
+              104: "26rem",
+              116: "29rem",
+              120: "30rem",
+              124: "31rem",
+              128: "32rem",
+              140: "35rem",
+              152: "38rem",
+              "1/3": "33.33%",
+              "2/3": "66.66%",
+              "-1/3": "-33.33%",
+              "-2/3": "-66.66%",
+              "1/12": "8.333333%",
+              "2/12": "16.666667%",
+              "3/12": "25%",
+              "4/12": "33.333333%",
+              "5/12": "41.666667%",
+              "6/12": "50%",
+              "7/12": "58.333333%",
+              "8/12": "66.666667%",
+              "9/12": "75%",
+              "10/12": "83.333333%",
+              "11/12": "91.666667%",
+              "12/12": "100%",
+              "-1/12": "-8.333333%",
+              "-2/12": "-16.666667%",
+              "-3/12": "-25%",
+              "-4/12": "-33.333333%",
+              "-5/12": "-41.666667%",
+              "-6/12": "-50%",
+              "-7/12": "-58.333333%",
+              "-8/12": "-66.666667%",
+              "-9/12": "-75%",
+              "-10/12": "-83.333333%",
+              "-11/12": "-91.666667%",
+              "1/10": "10%",
+              "2/10": "20%",
+              "3/10": "30%",
+              "4/10": "40%",
+              "5/10": "50%",
+              "6/10": "60%",
+              "7/10": "70%",
+              "8/10": "80%",
+              "9/10": "90%",
+              "-1/10": "-10%",
+              "-2/10": "-20%",
+              "-3/10": "-30%",
+              "-4/10": "-40%",
+              "-5/10": "-50%",
+              "-6/10": "-60%",
+              "-7/10": "-70%",
+              "-8/10": "-80%",
+              "-9/10": "-90%",
+            },
+            opacity: {
+              20: ".2",
+            },
+            scale: {
+              115: "1.15",
+              130: "1.3",
+              135: "1.35",
+              140: "1.4",
+              200: "2",
+              250: "2.5",
+              300: "3",
+              350: "3.5",
+              400: "4",
+            },
+            opacity: {
+              20: "20%",
+            },
+            boxShadow: {
+              "inner-xl": "inset 0 0 80px rgba(0, 0, 0, 0.8)",
+              box: "0px 3px 3px rgba(0, 0, 0, 0.1)",
+              fullbox: "3px 3px 15px 2px rgba(0, 0, 0, 0.15)",
+            },
+            transitionProperty: {
+              "justify-content": "justify-content",
+            },
+            inset: {
+              "1/2": "50%",
+              20: "5rem",
+              64: " 16rem",
+              72: " 18rem",
+            },
+            width: {
+              "3/2": "150%",
+            },
+            zIndex: {
+              60: 60,
+            },
+          },
+        },
+        variants: {
+          opacity: ["responsive", "hover"],
+        },
+        plugins: [],
+      };
+    </script>
+
+    <!-- Swipper y card -->
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+          normalizarCarrousel()
+          normalizarTestimonios();
+          testimoniosSwiper.update();
+          carrouselSwiper.update()
+        }
+      };
+
+      window.addEventListener("resize", function (event) {
+        normalizarCarrousel()
+        normalizarTestimonios();
+        testimoniosSwiper.update();
+        carrouselSwiper.update()
+      });
+
+       function normalizarCarrousel() {
+        let hs = [];
+        document
+          .querySelectorAll(".carrousel .swiper-slide")
+          .forEach((element) => {
+            element.classList.add("h-auto");
+            let h = element.offsetHeight;
+            element.classList.remove("h-auto");
+            hs.push(h);
+          });
+        let hMax = Math.max(...hs);
+        document
+          .querySelectorAll(".carrousel .swiper-slide")
+          .forEach((element) => {
+            element.style.height = hMax + "px";
+          });
+       }
+
+      function normalizarTestimonios() {
+        let hs = [];
+        document
+          .querySelectorAll(".testimonios .swiper-slide")
+          .forEach((element) => {
+            element.classList.add("h-auto");
+            let h = element.offsetHeight;
+            element.classList.remove("h-auto");
+            hs.push(h);
+          });
+        let hMax = Math.max(...hs);
+        document
+          .querySelectorAll(".testimonios .swiper-slide")
+          .forEach((element) => {
+            element.style.height = hMax + "px";
+          });
+      }
+    </script>
+    <script>
+      $(".card").click(function () {
+        var elem = $(this);
+        elem.toggleClass("card-transform");
+        elem.toggleClass("front-visibility");
+        setTimeout(function () {
+          elem.removeClass("card-transform");
+          elem.removeClass("front-visibility");
+        }, 15000);
+      });
+    </script>
+    <!-- Font Muli -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900|Poppins:700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frilea.pe</title>
+  </head>
+  <body>
+    <style>
+      .messages-menu.unread:after {
+        content: "";
+        margin-left: 3px;
+        margin-bottom: 10px;
+        width: 7px;
+        height: 7px;
+        background-color: #dc554e;
+        border-radius: 50%;
+      }
+
+      .filler-div {
+        height: 15px;
+        width: 250px;
+        background-color: #d0dee9;
+        margin-right: 10px;
+        border-radius: 6px;
+      }
+
+      .notf-efecto-hover :hover {
+        background-color: #f4f4ff;
+      }
+
+      .notf-efecto-hover :active {
+        background-color: #f4f4ff;
+      }
+
+      .circulo {
+        width: 43px;
+        height: 43px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #d0dee9;
+      }
+
+      .hover\:bg-white:hover {
+        background-color: #fff !important;
+      }
+
+      .hover\:text-frilea-light-purple:hover {
+        color: #c6bbff !important;
+      }
+    </style>
+    <!-- Header -->
+    <header
+      id="headerMain"
+      class="w-full h-16 xs:h-20 fixed top-0 z-50 headerMain px-4 lg:px-12 bg-transparent border-b border-opacity-0 border-solid border-frilea-grey"
+    >
+      <div class="container mx-auto lg:block h-full">
+        <div class="h-full row flex flex-row justify-between items-center">
+          <!--Mobile-->
+          <figure class="block lg:hidden mr-6 transform translate-y-1">
+            <a href="/" id="topnav-m-logo">
+              <img
+                src="/assets/images/logo-white.svg"
+                alt="frilea"
+                id="topnav-m-logo-img"
+              />
+            </a>
+          </figure>
+          <!--Desktop-->
+          <div class="hidden lg:flex flex-row items-center" id="topnav-d-logo">
+            <a class="" href="/">
+              <img
+                src="/assets/images/logo-white.svg"
+                alt="frilea"
+                width="250"
+                height="32"
+                id="topnav-d-logo-img"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      var header = document.getElementById("headerMain");
+var sticky = header.offsetTop;
+
+var last_known_scroll_position = 0;
+var ticking = false;
+
+function doSomething(scroll_pos) {
+  if (scroll_pos > sticky) {
+    header.classList.replace("border-opacity-0", "border-opacity-75");
+    header.classList.replace("bg-transparent", "bg-white");
+    let srcMobile = document.getElementById("topnav-m-logo-img").src;
+    let srcDesktop = document.getElementById("topnav-d-logo-img").src;
+    document.getElementById("topnav-m-logo-img").src = srcMobile.replace(
+      "logo-white.svg",
+      "logo.svg"
+    );
+    document.getElementById("topnav-d-logo-img").src = srcDesktop.replace(
+      "logo-white.svg",
+      "logo.svg"
+    );
+  } else {
+    header.classList.replace("border-opacity-75", "border-opacity-0");
+    header.classList.replace("bg-white", "bg-transparent");
+    let srcMobile = document.getElementById("topnav-m-logo-img").src;
+        let srcDesktop = document.getElementById("topnav-d-logo-img").src;
+        document.getElementById("topnav-m-logo-img").src = srcMobile.replace(
+          "logo.svg",
+          "logo-white.svg"
+        );
+        document.getElementById("topnav-d-logo-img").src = srcDesktop.replace(
+          "logo.svg",
+          "logo-white.svg"
+        );
+  }
+}
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+  }
+  ticking = true;
+});
+    </script>
+    <style>
+      @media (max-width: 480px) {
+        .margin-botton {
+          margin-bottom: 50px;
+        }
+
+        .sm\:mt-8 {
+          margin-top: 2rem !important;
+        }
+
+        .salto-linea {
+          visibility: hidden;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .lg\:ml-0 {
+          margin-left: 0 !important;
+        }
+      }
+
+      .img-center {
+        display: block;
+        margin: auto;
+      }
+
+      .max-w-xs-right-left {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    </style>
+    <!-- Banner -->
+    <section class="relative overflow-hidden bg-black" id="hero">
+      <picture class="w-full">
+        <source
+          media="(min-width:465px)"
+          srcset="/assets/images/background-frilea-2022.png"
+        />
+        <img
+          class="w-full"
+          src="/assets/images/background-frilea-2022-mobile.jpg"
+          alt="Frilea"
+        />
+      </picture>
+      <div class="absolute inset-0 z-0 bg-linear-purple"></div>
+      <div class="absolute inset-0 z-10">
+        <div class="container relative h-full mx-auto">
+          <div
+            class="absolute bottom-0 w-full mb-8 transform translate-x-1/2 md:mb-0 md:mt-8 right-1/2 md:translate-x-0 md:right-auto md:bottom-1/2 md:translate-y-1/2"
+          >
+            <div
+              class="flex flex-col items-center justify-center md:items-start"
+            >
+              <h1
+                class="text-white text-lg md:text-4xl lg:text-4xl xl:text-4xl font-extrabold xl:text-left md:text-left px-4 md:px-8 w-full md:w-3/4  margin-botton"
+              >
+              Una iniciativa para promover la colaboración 
+              <br>
+              entre emprendedores y profesionales 
+              <br>
+              independientes.
+                <!-- ¿Necesitas delegar? <br />
+                Encuentra al frilancer <br class="sm:hidden" />
+                ideal en <b class="bg-white text-frilea-purple">Frilea.pe</b> -->
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .bg-linear-purple-40 {
+        background: #0c1937;
+        background: -o-linear-gradient(
+          334.14deg,
+          rgba(12, 25, 55, 0.3) 53.88%,
+          rgba(51, 36, 135, 0.801) 87.11%
+        );
+        background: linear-gradient(
+          115.86deg,
+          rgba(12, 25, 55, 0.37) 53.88%,
+          rgba(51, 36, 135, 0.432) 87.11%
+        );
+      }
+    </style>
+    <style>
+      .swiper-pagination-bullet {
+        background-color: #c6bbff;
+        margin: 8px !important;
+        width: 10px !important;
+        height: 10px !important;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #7561e5;
+      }
+
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 16px;
+        font-weight: bold;
+        color: #0c1937;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        top: 45%;
+      }
+      .swiper-button-next {
+        right: 4px;
+      }
+      .swiper-button-prev {
+        left: 4px;
+      }
+
+      .bg-gradient-top {
+        background: linear-gradient(
+          180deg,
+          rgba(12, 25, 55, 0.6) 0%,
+          rgba(196, 196, 196, 0) 100%
+        );
+      }
+    </style>
+    <style>
+      .card {
+        background-color: transparent;
+        perspective: 1000px;
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .card-transform .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-visibility .front-card figure {
+        visibility: hidden;
+      }
+
+      .front-card,
+      .back-card {
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .back-card {
+        position: absolute;
+        transform: rotateY(180deg);
+      }
+    </style>
+    <!-- Segunda seccion -->
+      <div class="relative overflow-hidden bg-black">
+        <picture class="w-full">
+          <source
+            media="(min-width:465px)"
+            srcset="/assets/images/bg-image2.png"
+          />
+          <!-- Acá falta la foto versión mobile -->
+          <img
+            class="w-full"
+            src="/assets/images/bg-image2.png"
+            alt="Frilea"
+          />
+        </picture>
+        <!-- <div class="absolute inset-0 z-0 bg-linear-purple"></div> -->
+        <div class="absolute inset-0 z-10">
+          <div class="container relative h-full mx-auto">
+            <div
+              class="flex justify-end items-center h-full"
+            >
+              <div
+                class="flex flex-col items-center justify-center md:items-start mb-4 w-3/6 md:w-5/12"
+              >
+                <h1
+                  class="text-white text-xs font-extrabold text-left md:text-2xl px-4 md:px-8 w-full"
+                >
+                ¿Cómo podemos convertirnos 
+                en el aliado de los independientes para afrontar los retos del año 2020?
+                </h1>
+                <h1
+                class="text-white text-xs font-extrabold text-left md:text-2xl px-4 md:px-8 w-full mt-3 md:mt-9"
+              > Nuestro reto era convertir el 2020 en una oportunidad......
+              
+            
+              
+              </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Tercera seccion carrousel -->
+    <section
+    id="carrousel">
+      <div class="container mx-auto p-10 md:p-24">
+        <div class="carrousel swiper-container pb-12">
+          <div class="flex swiper-wrapper">
+            <article class="swiper-slide">
+              <div
+                class="relative overflow-hidden"
+              >
+                <figure class="w-full">
+                  <img
+                 
+                  src="/assets/images/cimg1.png"
+                  loading="lazy"
+                  />
+                </figure>
+                <div class="absolute inset-0 z-0 bg-linear-black-custom"></div>
+                <div class="absolute inset-0 z-10">
+                  <div class="container relative h-full mx-auto">
+                    <div
+                        class="h-full w-full flex flex-col items-start justify-start md:items-start"
+                      >
+                        <h1
+                          class="text-white text-2xl font-extrabold text-left pl-6 pt-6"
+                        >
+                        Inka Grains
+                        </h1>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div
+                class="relative overflow-hidden h-full"
+              >
+                <figure class="w-full">
+                  <img
+                  class="w-full"
+                  src="/assets/images/cimg2.png"
+                  loading="lazy"
+                  />
+                </figure>
+                <div class="absolute inset-0 z-0 bg-linear-black-custom"></div>
+                <div class="absolute inset-0 z-10">
+                  <div class="container relative h-full mx-auto">
+                    <div
+                        class="h-full w-full flex flex-col items-start justify-start md:items-start"
+                      >
+                        <h1
+                          class="text-white text-2xl font-extrabold text-left pl-6 pt-6"
+                        >
+                        Polen
+                        </h1>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div
+                class="relative overflow-hidden h-full"
+              >
+                <figure class="w-full">
+                  <img
+                  class="w-full"
+                  src="/assets/images/cimg3.png"
+                  loading="lazy"
+                  />
+                </figure>
+                <div class="absolute inset-0 z-0 bg-linear-black-custom"></div>
+                <div class="absolute inset-0 z-10">
+                  <div class="container relative h-full mx-auto">
+                    <div
+                        class="h-full w-full flex flex-col items-start justify-start md:items-start"
+                      >
+                        <h1
+                          class="text-white text-2xl font-extrabold text-left pl-6 pt-6"
+                        >
+                        Inka Grains
+                        </h1>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div
+                class="relative overflow-hidden h-full"
+              >
+                <figure class="w-full">
+                  <img
+                  class="w-full"
+                  src="/assets/images/cimg4.png"
+                  loading="lazy"
+                  />
+                </figure>
+                <div class="absolute inset-0 z-0 bg-linear-black-custom"></div>
+                <div class="absolute inset-0 z-10">
+                  <div class="container relative h-full mx-auto">
+                    <div
+                        class="h-full w-full flex flex-col items-start justify-start md:items-start"
+                      >
+                        <h1
+                          class="text-white text-2xl font-extrabold text-left pl-6 pt-6"
+                        >
+                       Polen
+                        </h1>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+            
+            </article>
+          </div>
+           <!-- If we need navigation buttons -->
+           <div
+           class="hidden w-12 h-12 bg-white rounded-full swiper-button-prev lg:flex"
+         ></div>
+         <div
+           class="hidden w-12 h-12 bg-white rounded-full swiper-button-next lg:flex"
+         ></div>
+         <div
+           class="bottom-0 swiper-pagination"
+         ></div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .bg-linear-black-custom{
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.87718837535014) 84%);
+      }
+    </style>
+    <!-- Emprendedores que confien en frilea -->
+    <section
+      class="relative py-8 bg-frilea-white lg:py-16 xl:py-24"
+      id="testimonios"
+    >
+      <div class="container mx-auto">
+        <h1
+          class="cliente-part text-center font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5.5xl mb-6 lg:mb-10 mx-4 text-white relative z-10"
+        >
+          Emprendedores que confíaron en Frilea
+        </h1>
+        <h1
+          class="frilancer-part hidden text-center font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5.5xl mb-6 lg:mb-10 mx-4 text-frilea-dark-blue relative z-10"
+        >
+        Emprendedores que confíaron en Frilea
+        </h1>
+        <div
+          class="pb-12 transform testimonios swiper-container w-3/2 md:w-full translate-x-1/12 md:translate-x-0 md:p-8 md:pb-12 lg:w-11/12 xl:w-9/10"
+        >
+          <div class="flex swiper-wrapper">
+            <article class="swiper-slide">
+              <div
+                class="flex flex-col items-center h-full p-6 bg-white rounded-lg cliente-part shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="/assets/images/home-michelle.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block lg:text-lg">
+                      Yo uso <b>Frilea</b> porque
+                      <b>encuentro freelancers</b> con la <b>experiencia</b> y
+                      las <b>habilidades</b> que buscamos.
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="/assets/images/comillas.svg"
+                        loading="lazy"
+                      />
+                      <!-- <span class="relative">
+                                         <span class="absolute inset-0 text-6xl font-bold leading-none transform rotate-180 translate-x-8 translate-y-2" 
+                                         style="-webkit-text-stroke: 2px #7561E5; -webkit-text-fill-color: white;">“</span>
+                                     </span> -->
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Michelle Garreaud
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Directora en Mambo
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center hidden h-full p-6 rounded-lg frilancer-part bg-frilea-dark-blue shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="/assets/images/home-pierina.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-light-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block text-white lg:text-lg">
+                      Me llevo una <b>experiencia muy positiva</b> en
+                      <b>Frilea</b> porque he podido conectar con nuevos
+                      clientes y así <b> crecer como profesional</b>, aplicando
+                      mis habilidades y los servicios que brindo.
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="assets/images/comillas-light.svg"
+                        loading="lazy"
+                      />
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Pierinna Olivas
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Fotógrafa y comunicadora
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div
+                class="flex flex-col items-center h-full p-6 bg-white rounded-lg cliente-part shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="assets/images/home-alonso.png"
+                    alt=""
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block lg:text-lg">
+                      No pierdan tiempo en su búsqueda. En <b>Frilea</b> van a
+                      tener contacto con frilancers con <b>talento</b> que van a
+                      ayudarlos con temas de diseño, branding, páginas web y
+                      más.
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="assets/images/comillas.svg"
+                      />
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Alonso Luna
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Co-fundador de Emerge
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center hidden h-full p-6 rounded-lg frilancer-part bg-frilea-dark-blue shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="assets/images/home-andres.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-light-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block text-white lg:text-lg">
+                      Trabajar con <b>Frilea.pe</b> ha sido una
+                      <b>experiencia agradable, profesional y rentable.</b>
+                      Ellos se encargan de conseguirte el trabajo para que tú
+                      realices la magia.
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="assets/images/comillas-light.svg"
+                        loading="lazy"
+                      />
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Andrés Diosis
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Diseñador Gráfico
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div
+                class="flex flex-col items-center h-full p-6 bg-white rounded-lg cliente-part shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="assets/images/home-alessandra.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block lg:text-lg">
+                      En <b>Frilea</b> pude encontrar una
+                      <b>gran variedad de diseñadores</b> gráficos y al final
+                      pudimos sacar a flote una presentación corporativa muy
+                      <b>rápida, súper dinámica y bastante bonita.</b>
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="assets/images/comillas.svg"
+                        loading="lazy"
+                      />
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Alessandra Villalobos
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Brand manager en iVisa.com
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center hidden h-full p-6 rounded-lg frilancer-part bg-frilea-dark-blue shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="assets/images/home-luz.png"
+                    alt=""
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-light-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block text-white lg:text-lg">
+                      Usé <b>Frilea</b> como para probar, es
+                      <b>súper fácil</b> y la verdad no pensé que tendría una
+                      oportunidad tan rápido. Me encanta que quieran
+                      <b>empoderar a los frilancers</b>, son capas@s.
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="assets/images/comillas-light.svg"
+                        loading="lazy"
+                      />
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Luz Guzmán
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Diseñadora Gráfica
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div
+                class="flex flex-col items-center h-full p-6 bg-white rounded-lg cliente-part shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="assets/images/home-jose-carlos.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block lg:text-lg">
+                      Pude encontrar a muchos profesionales que han
+                      <b
+                        >impactado enormemente en el crecimiento de mi empresa.
+                        Frilea</b
+                      >
+                      se ha vuelto nuestro <b>gran aliado.</b>
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="assets/images/comillas.svg"
+                        loading="lazy"
+                      />
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Jose Carlo Cuadros
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-text-grey"
+                    >
+                      Fundador Inka Grains
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center hidden h-full p-6 rounded-lg frilancer-part bg-frilea-dark-blue shadow-box"
+              >
+                <figure class="w-5/12 mb-4">
+                  <img
+                    class="w-full rounded-full shadow-xl"
+                    src="assets/images/home-daniel.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="flex flex-col justify-between h-full">
+                  <li class="flex flex-row my-4">
+                    <p
+                      class="mr-1 text-6xl font-bold transform -translate-y-4 text-frilea-light-purple"
+                    >
+                      “
+                    </p>
+                    <p class="inline-block text-white lg:text-lg">
+                      <b>Fue muy fácil</b> registrarme y llenar mi datos.
+                      <b>Me gusta mucho</b> la interfaz, es súper rápida.
+                      <img
+                        class="inline-block"
+                        width="20"
+                        height="17.3"
+                        src="assets/images/comillas-light.svg"
+                        loading="lazy"
+                      />
+                    </p>
+                  </li>
+                  <div>
+                    <h2
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Daniel Lingan
+                    </h2>
+                    <h3
+                      class="self-start ml-8 text-sm lg:text-base text-frilea-medium-grey"
+                    >
+                      Programador
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div
+            class="hidden w-12 h-12 bg-white rounded-full swiper-button-prev lg:flex"
+          ></div>
+          <div
+            class="hidden w-12 h-12 bg-white rounded-full swiper-button-next lg:flex"
+          ></div>
+          <div
+            class="bottom-0 transform translate-y-3 swiper-pagination -translate-x-3/12 md:translate-x-0"
+          ></div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-0 right-0 cliente-part bg-frilea-dark-blue h-3/5"
+      ></div>
+      <div
+        class="absolute top-0 left-0 right-0 hidden frilancer-part bg-frilea-light-purple bg-opacity-40 h-3/5"
+      ></div>
+    </section>
+    <!-- Como funcionaba Frilea -->
+    <section
+      class="py-8 md:px-4 lg:py-16 xl:py-24 bg-white cliente-part"
+      id="como-funciona"
+    >
+      <div class="container mx-auto">
+        <h1
+          class="mx-4 mb-6 text-2xl font-extrabold text-center text-frilea-dark-blue md:text-3xl lg:text-4xl xl:text-5xl lg:mb-10"
+        >
+          Como funcionaba Frilea
+        </h1>
+        <section
+          class="grid w-full grid-flow-row grid-cols-1 grid-rows-4 gap-4 mb-6 md:grid-cols-2 md:grid-rows-2 md:px-8 lg:w-3/4 lg:mx-auto"
+        >
+          <article
+            class="flex flex-col items-center justify-between p-6 bg-white border border-frilea-light-grey shadow-box rounded-lg"
+          >
+            <figure
+              class="flex items-center justify-center flex-grow w-1/5 mb-4"
+            >
+              <img
+                class="w-full cliente-part"
+                src="/assets/images/publica-tu-proyecto.svg"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+            <div>
+              <h2
+                class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
+              >
+                1. Publica tu proyecto
+              </h2>
+              <p
+                class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
+              >
+                Cuéntale al frilancer qué necesitas y cuál es tu presupuesto.
+              </p>
+            </div>
+          </article>
+          <article
+            class="flex flex-col items-center justify-between p-6 bg-white border border-frilea-light-grey shadow-box rounded-lg"
+          >
+            <figure
+              class="flex items-center justify-center flex-grow w-1/5 mb-4"
+            >
+              <img
+                class="w-full cliente-part"
+                src="/assets/images/compara-las-propuestas.svg"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+            <div>
+              <h2
+                class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
+              >
+                2. Compara las propuestas
+              </h2>
+              <p
+                class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
+              >
+                Recibe diferentes cotizaciones, chatea con los frilancers y
+                compara tus propuestas.
+              </p>
+            </div>
+          </article>
+          <article
+            class="flex flex-col items-center justify-between p-6 bg-white border border-frilea-light-grey shadow-box rounded-lg"
+          >
+            <figure
+              class="flex items-center justify-center flex-grow w-1/5 mb-4"
+            >
+              <img
+                class="w-full transform cliente-part scale-115"
+                src="/assets/images/contrata-por-frilea.svg"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+            <div>
+              <h2
+                class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
+              >
+                3. Contrata al Frilancer ideal
+              </h2>
+              <p
+                class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
+              >
+                Elige a tu frilancer ideal. Asegúrate de acordar con tu
+                frilancer las fechas de entrega y pagos antes de comenzar tu
+                proyecto.
+              </p>
+            </div>
+          </article>
+          <article
+            class="flex flex-col items-center justify-between p-6 bg-white border border-frilea-light-grey shadow-box rounded-lg"
+          >
+            <figure
+              class="flex items-center justify-center flex-grow w-1/5 mb-4"
+            >
+              <img
+                class="w-full cliente-part"
+                src="/assets/images/recibe-trabajo-final.svg"
+                alt=""
+                loading="lazy"
+              />
+            </figure>
+            <div>
+              <h2
+                class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
+              >
+                4. Recibe y califica el trabajo final
+              </h2>
+              <p
+                class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
+              >
+                Una vez recibas el trabajo final del frilancer puedes
+                calificarlo.
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <div class="relative overflow-hidden bg-black">
+      <picture class="w-full">
+        <source
+          media="(min-width:465px)"
+          srcset="/assets/images/labentana_generales.png"
+        />
+        <!-- Acá falta la foto versión mobile -->
+        <img
+          class="w-full"
+          src="/assets/images/labentana_generales.png"
+          alt="Frilea"
+        />
+      </picture>
+      <div class="absolute inset-0 z-0 bg-linear-purple"></div>
+      <div class="absolute inset-0 z-10">
+        <div class="container relative h-full mx-auto">
+          <div
+            class="flex justify-center items-end h-full"
+          >
+            <div
+              class="flex flex-col items-center justify-center md:items-start mb-4"
+            >
+              <h1
+                class="text-white text-2xl font-extrabold xl:text-left md:text-left px-4 md:px-8 w-full margin-botton"
+              >
+              Proyecto a cargo de 
+              <a href="https://www.labentana.pe/"  target="_blank">www.labentana.pe/</a>
+              
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-frilea-dark-blue">
+      <div class="container mx-auto">
+          <div class="flex flex-col">
+            <div class="flex flex-col items-center md:flex-row md:justify-between mt-4 px-4">
+                  <div class="flex flex-row items-center my-2 ">
+                      <img src="assets/images/logo-white.svg" alt="frilea" width="250" height="32">
+                  </div>
+                  <div class="flex items-center my-2">
+                      <h6 class="mr-4 text-white font-bold">SÍGUENOS:</h6>
+                      <ul class="flex">
+                          <a class="footer-siguenos flex justify-center items-center hover:bg-frilea-grey rounded-full w-12 h-12 mr-2"
+                              href="https://www.facebook.com/Frilea.pe/" id="footer-siguenos-facebook">
+                              <svg width="28" height="28" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M21.125 11C21.125 5.40643 16.5936 0.875 11 0.875C5.40643 0.875 0.875 5.40643 0.875 11C0.875 16.5936 5.40643 21.125 11 21.125C16.5936 21.125 21.125 16.5936 21.125 11ZM11 2.55478C15.6602 2.55478 19.4452 6.33976 19.4452 11C19.4452 15.6602 15.6602 19.4452 11 19.4452C6.33976 19.4452 2.55478 15.6602 2.55478 11C2.55478 6.33976 6.33976 2.55478 11 2.55478Z" fill="white" stroke="white" stroke-width="0.25"/>
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1223 5.00001C12.2388 5.00996 11.1646 5.06906 10.4883 5.53477C10.046 5.85022 9.69781 6.33279 9.47757 6.84614C9.26184 7.349 9.25968 7.92912 9.2159 8.47924V10.4594H7V13.1596H9.2159V20H11.9432V13.1596H13.9886L14.3295 10.4594H11.9432C11.9388 10.0379 11.9743 9.73702 11.9432 9.36142V8.46137C11.9432 7.96273 12.3233 7.56131 12.7955 7.56131H13.8182C13.8766 7.56131 13.9336 7.56745 13.9886 7.57929C14.0437 7.56744 14.1006 7.56131 14.1591 7.56131H14.5V5.05905C14.5 5.05905 13.8303 5.0066 13.1224 5L13.1223 5.00001Z" fill="white"/>
+                              </svg>
+                  
+                          </a>
+                          <a class="footer-siguenos flex justify-center items-center hover:bg-frilea-grey rounded-full w-12 h-12 mr-2"
+                              href="https://www.instagram.com/frilea.pe/" id="footer-siguenos-instagram">
+                              <i class="icon-instagram text-white font-bold text-3xl"></i>
+                          </a>
+                          <a class="footer-siguenos flex justify-center items-center hover:bg-frilea-grey rounded-full w-12 h-12"
+                              href="https://www.linkedin.com/company/frileape/" id="footer-siguenos-linkedin">
+                              <i class="icon-linkedin-1 text-white font-bold text-3xl"></i>
+                              </span>
+                          </a>
+                      </ul>
+                  </div>
+            </div>
+            <div class="flex justify-start my-4">
+              <p class="leading-tight text-white text-sm">Frilea es una iniciativa que operó hasta XXXX</p>
+            </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+  <!-- Swiper -->
+  <script>
+     var carrouselSwiper = new Swiper('.swiper-container.carrousel', {
+        // Optional parameters
+         direction: 'horizontal',
+         autoHeight: false,
+         resizeObserver: true,
+         loop: true,
+         //If we need pagination
+         pagination: {
+             el: '.swiper-pagination',
+             clickable: true,
+         },
+         // Navigation arrows
+         navigation: {
+             prevEl: '.swiper-button-prev',
+             nextEl: '.swiper-button-next',
+         },
+         // And if we need scrollbar
+         scrollbar: {
+             el: '.swiper-scrollbar',
+         },
+         breakpoints: {
+             320: {
+                 slidesPerView: 2,
+                 spaceBetween: 10,
+             },
+             400: {
+                 slidesPerView: 2,
+                 spaceBetween: 30,
+             },
+             640: {
+                 slidesPerView: 2,
+                 spaceBetween: 25,
+             },
+             768: {
+                 slidesPerView: 2,
+                 spaceBetween: 40,
+             },
+             1024: {
+                 slidesPerView: 4,
+                 spaceBetween: 30,
+             },
+             1440: {
+                 slidesPerView: 4,
+                 spaceBetween: 30,
+             }
+         },
+         on: {
+             afterInit: function () {
+                 normalizarCarrousel()
+             },
+         },
+     })
+
+    var testimoniosSwiper = new Swiper(".swiper-container.testimonios", {
+      // Optional parameters
+      direction: "horizontal",
+      autoHeight: true,
+      resizeObserver: true,
+      loop: true,
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        400: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+      on: {
+        afterInit: function () {
+          normalizarTestimonios();
+        },
+      },
+    });
+  </script>
+  <!-- Scroll -->
+  <script>
+ 
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.replace("border-opacity-0", "border-opacity-75");
+//     header.classList.replace("bg-transparent", "bg-white");
+//     let srcMobile = document.getElementById("topnav-m-logo-img").src;
+//     let srcDesktop = document.getElementById("topnav-d-logo-img").src;
+//     document.getElementById("topnav-m-logo-img").src = srcMobile.replace(
+//       "logo-white.svg",
+//       "logo.svg"
+//     );
+//     document.getElementById("topnav-d-logo-img").src = srcDesktop.replace(
+//       "logo-white.svg",
+//       "logo.svg"
+//     );
+//   } else {
+//     header.classList.replace("border-opacity-75", "border-opacity-0");
+//     header.classList.replace("bg-white", "bg-transparent");
+//     let srcMobile = document.getElementById("topnav-m-logo-img").src;
+//         let srcDesktop = document.getElementById("topnav-d-logo-img").src;
+//         document.getElementById("topnav-m-logo-img").src = srcMobile.replace(
+//           "logo.svg",
+//           "logo-white.svg"
+//         );
+//         document.getElementById("topnav-d-logo-img").src = srcDesktop.replace(
+//           "logo.svg",
+//           "logo-white.svg"
+//         );
+//   }
+// }
+
+
+
+    // function changeStylesHeader(scroll_pos) {
+    //   console.log(scroll_pos)
+    //   if (scroll_pos > 10) {
+    //     console.log("xd")
+    //     document
+    //       .querySelector(".headerMain")
+    //       .classList.replace("border-opacity-0", "border-opacity-75");
+    //     document
+    //       .querySelector(".headerMain")
+    //       .classList.replace("bg-transparent", "bg-white");
+    //     let srcMobile = document.getElementById("topnav-m-logo-img").src;
+    //     let srcDesktop = document.getElementById("topnav-d-logo-img").src;
+    //     document.getElementById("topnav-m-logo-img").src = srcMobile.replace(
+    //       "logo-white.svg",
+    //       "logo.svg"
+    //     );
+    //     document.getElementById("topnav-d-logo-img").src = srcDesktop.replace(
+    //       "logo-white.svg",
+    //       "logo.svg"
+    //     );
+    //   } else {
+    //     document
+    //       .querySelector(".headerMain")
+    //       .classList.replace("border-opacity-75", "border-opacity-0");
+    //     document
+    //       .querySelector(".headerMain")
+    //       .classList.replace("bg-white", "bg-transparent");
+    //     let srcMobile = document.getElementById("topnav-m-logo-img").src;
+    //     let srcDesktop = document.getElementById("topnav-d-logo-img").src;
+    //     document.getElementById("topnav-m-logo-img").src = srcMobile.replace(
+    //       "logo.svg",
+    //       "logo-white.svg"
+    //     );
+    //     document.getElementById("topnav-d-logo-img").src = srcDesktop.replace(
+    //       "logo.svg",
+    //       "logo-white.svg"
+    //     );
+    //   }
+    // }
+    // function addListenerToScrollEvent() {
+    //   var last_known_scroll_position = 0;
+    //   var ticking = false;
+    //   window.addEventListener("scroll", function (e) {
+    //     last_known_scroll_position = window.scrollY;
+    //     if (!ticking) {
+    //       window.requestAnimationFrame(function () {
+    //         changeStylesHeader(last_known_scroll_position);
+    //         ticking = false;
+    //       });
+    //     }
+    //     ticking = true;
+    //   });
+    // }
+    // addListenerToScrollEvent();
+  </script>
+</html>
