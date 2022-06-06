@@ -6628,3 +6628,17 @@ select.select--sm ~ div.order--icon:after {
     opacity: 1;
   }
 }
+.activeSwitch{
+  color:white !important;
+  text-decoration: underline white;
+  
+}
+.titleSwitch{
+  color:#ffffff75;
+  padding:20px 10px;
+  cursor:pointer;
+}
+.titleSwitch:hover{
+  color:white;
+  text-decoration: underline white;
+}

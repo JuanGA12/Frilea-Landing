@@ -630,7 +630,31 @@ window.addEventListener('scroll', function(e) {
         transform: rotateY(180deg);
       }
     </style>
-    <!-- Segunda seccion -->
+    <!--Reto-->
+    <section class="p-4 md:p-8">
+      <h2
+                class=" text-xs font-extrabold text-left cliente-part md:text-2xl lg:text-3xl text-frilea-dark-blue"
+              >
+              Nuestro reto era convertirnos en el aliado de los independientes para navegar la incertidumbre que trajo la pandemia.
+              </h2>
+              <h2  class="mt-2 text-xs font-extrabold text-left cliente-part md:text-2xl lg:text-3xl text-frilea-purple">
+                Por eso creamos Frilea.pe, una plataforma que conecta emprendedores con frilancers con el fin de transformar su talento en logros. 
+              </h2>
+    </section>
+    <!-- Bar -->
+    <section>
+     
+      <div class="w-full bg-frilea-dark-blue flex justify-center items-center">
+        <div  class="flex"  id="landing-switch-perfil">
+          <h3 id="Fri" class="activeSwitch titleSwitch text-xs md:text-2xl lg:text-2xl">
+            Frilancers
+          </h3>
+          <h3 id="Empr"class="titleSwitch text-xs  md:text-2xl lg:text-2xl">
+            Emprendedores
+          </h3>
+        </div>
+      </div>
+      <!-- Imagen y texto -->
       <div class="relative overflow-hidden bg-black">
         <picture class="w-full">
           <source
@@ -651,27 +675,55 @@ window.addEventListener('scroll', function(e) {
               class="flex justify-end items-center h-full"
             >
               <div
+              id="FriText"
                 class="flex flex-col items-center justify-center md:items-start mb-4 w-3/6 md:w-5/12"
               >
                 <h1
                   class="text-white text-xs font-extrabold text-left md:text-2xl px-4 md:px-8 w-full"
                 >
-                ¿Cómo podemos convertirnos 
-                en el aliado de los independientes para afrontar los retos del año 2020?
+                Los ayudamos a buscar nuevas oportunidades para trabajar de forma remota y hacer crecer su red de clientes
                 </h1>
+               
+              </div>
+              <div
+              id="EmprText"
+                class="hidden flex flex-col items-center justify-center md:items-start mb-4 w-3/6 md:w-5/12"
+              >
                 <h1
-                class="text-white text-xs font-extrabold text-left md:text-2xl px-4 md:px-8 w-full mt-3 md:mt-9"
-              > Nuestro reto era convertir el 2020 en una oportunidad......
-              
-            
-              
-              </h1>
+                  class="text-white text-xs font-extrabold text-left md:text-2xl px-4 md:px-8 w-full"
+                >
+                Contactaron y contrataron talento independiente por proyectos que los ayudaron a lanzar, digitalizar o reinventar sus negocios
+                </h1>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+    </section>
+    <script>
+        let FriButton = document.querySelector('#Fri')
+        let EmprButton = document.querySelector('#Empr')
+        let FriText =  document.querySelector('#FriText')
+        let EmprText = document.querySelector('#EmprText')
+      document.querySelector('#Fri').addEventListener('click', function (e) {
+        e.preventDefault()
+        if (EmprButton.classList.contains('activeSwitch')) {
+          EmprButton.classList.remove('activeSwitch');
+          EmprText.classList.add("hidden")
+        }
+        FriButton.classList.add('activeSwitch');
+        FriText.classList.remove("hidden")
+    })
+    document.querySelector('#Empr').addEventListener('click', function (e) {
+        e.preventDefault()
+        if (FriButton.classList.contains('activeSwitch')) {
+          FriButton.classList.remove('activeSwitch');
+          FriText.classList.add("hidden")
+        }
+        EmprButton.classList.add('activeSwitch');
+        EmprText.classList.remove("hidden")
+    })
+    </script>
     <!-- Tercera seccion carrousel -->
     <section
     id="carrousel">
@@ -820,12 +872,12 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
         <h1
           class="cliente-part text-center font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5.5xl mb-6 lg:mb-10 mx-4 text-white relative z-10"
         >
-          Emprendedores que confíaron en Frilea
+          Emprendedores que confiaron en Frilea
         </h1>
         <h1
           class="frilancer-part hidden text-center font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5.5xl mb-6 lg:mb-10 mx-4 text-frilea-dark-blue relative z-10"
         >
-        Emprendedores que confíaron en Frilea
+        Emprendedores que confiaron en Frilea
         </h1>
         <div
           class="pb-12 transform testimonios swiper-container w-3/2 md:w-full translate-x-1/12 md:translate-x-0 md:p-8 md:pb-12 lg:w-11/12 xl:w-9/10"
@@ -1236,7 +1288,7 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
         <h1
           class="mx-4 mb-6 text-2xl font-extrabold text-center text-frilea-dark-blue md:text-3xl lg:text-4xl xl:text-5xl lg:mb-10"
         >
-          Como funcionaba Frilea
+        Frilea.pe fue pensado con la flexibilidad y agilidad que necesitaban nuestros usuarios
         </h1>
         <section
           class="grid w-full grid-flow-row grid-cols-1 grid-rows-4 gap-4 mb-6 md:grid-cols-2 md:grid-rows-2 md:px-8 lg:w-3/4 lg:mx-auto"
@@ -1258,12 +1310,12 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
               <h2
                 class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
               >
-                1. Publica tu proyecto
+                1. Proyectos publicados
               </h2>
               <p
                 class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
               >
-                Cuéntale al frilancer qué necesitas y cuál es tu presupuesto.
+              El emprendedor publica un proyecto con el detalle, presupuesto disponible y plazos para que los frilancers interesados puedan postular.
               </p>
             </div>
           </article>
@@ -1284,13 +1336,12 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
               <h2
                 class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
               >
-                2. Compara las propuestas
+                2. Comparación de propuestas
               </h2>
               <p
                 class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
               >
-                Recibe diferentes cotizaciones, chatea con los frilancers y
-                compara tus propuestas.
+              Logramos que cada proyecto reciba postulaciones en menos de 24 horas. El emprendedor recibe las cotizaciones, chatea con el frilancer y elige al ideal.
               </p>
             </div>
           </article>
@@ -1311,14 +1362,12 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
               <h2
                 class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
               >
-                3. Contrata al Frilancer ideal
+                3. Contrata a través de Frilea.pe
               </h2>
               <p
                 class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
               >
-                Elige a tu frilancer ideal. Asegúrate de acordar con tu
-                frilancer las fechas de entrega y pagos antes de comenzar tu
-                proyecto.
+              El emprendedor decide contratar al frilancer a través de Frilea y realiza el pago de manera segura. Frilea.pe lo guarda hasta que el frilancer entregue lo acordado.
               </p>
             </div>
           </article>
@@ -1339,13 +1388,12 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
               <h2
                 class="mb-4 text-2xl font-extrabold text-center cliente-part lg:text-3xl text-frilea-purple"
               >
-                4. Recibe y califica el trabajo final
+                4. Recibe el trabajo final
               </h2>
               <p
                 class="px-2 text-lg text-center cliente-part md:text-xl lg:text-2xl md:px-4 lg:px-6"
               >
-                Una vez recibas el trabajo final del frilancer puedes
-                calificarlo.
+              El emprendedor aprueba el proyecto terminado y se libera el pago al frilancer.
               </p>
             </div>
           </article>
@@ -1370,19 +1418,24 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
       <div class="absolute inset-0 z-10">
         <div class="container relative h-full mx-auto">
           <div
-            class="flex justify-center items-end h-full"
+            class="flex flex-col justify-end relative items-center relative h-full"
           >
-            <div
-              class="flex flex-col items-center justify-center md:items-start mb-4"
-            >
+            <div class="px-4 md:px-20 lg:px-32 absolute inset-y-1/4">
+              <h2 class="text-white text-base md:text-4xl lg:text-5xl font-extrabold">
+                "La innovación es la capacidad de ver el cambio como una oportunidad - no una amenaza"
+              </h2>
+              <span  class="text-white text-sm md:text-2xl lg:text-4xl">
+                Steve Jobs
+              </span>
+            </div>
               <h1
-                class="text-white text-2xl font-extrabold xl:text-left md:text-left px-4 md:px-8 w-full margin-botton"
+                class="text-white text-sm md:text-2xl text-center px-4 md:px-8 w-full"
               >
-              Proyecto a cargo de 
+              Un proyecto de 
               <a href="https://www.labentana.pe/"  target="_blank">www.labentana.pe/</a>
               
               </h1>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -1419,7 +1472,7 @@ background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(4,3,15,0.877188375
                   </div>
             </div>
             <div class="flex justify-start my-4">
-              <p class="leading-tight text-white text-sm">Frilea es una iniciativa que operó hasta XXXX</p>
+              <p class="leading-tight text-white text-sm mx-3">Frilea es una iniciativa que operó hasta 7 de Junio del 2022.</p>
             </div>
           </div>
       </div>
